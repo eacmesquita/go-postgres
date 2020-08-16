@@ -11,7 +11,7 @@ import (
   "github.com/gorilla/mux"
 )
 
-const apiVersion = "v1"
+const apiVersion = "v2"
 
 var (
   host     = os.Getenv("DATABASE_SERVICE_NAME")
@@ -47,7 +47,7 @@ func returnAllArticles(w http.ResponseWriter, r *http.Request){
     }
   }
   encoder := json.NewEncoder(w)
-  //encoder.SetIndent("","    ")
+  encoder.SetIndent("","    ")
   encoder.Encode(articles)
 }
 

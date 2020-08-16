@@ -1,4 +1,4 @@
-VERSION = 0.1
+VERSION = 0.2
 IMAGE = quay.io/eacmesquita96/go-postgres:v$(VERSION)
 
 build:
